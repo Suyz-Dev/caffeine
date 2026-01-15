@@ -13,7 +13,39 @@ const findImage = (id: string): { imageUrl: string; imageHint: string; descripti
       // Ensure a valid placeholder is returned if an image is not found.
       return { imageUrl: 'https://picsum.photos/seed/error/1920/1080', imageHint: 'placeholder', description: 'Placeholder image' };
     }
-    return { imageUrl: image.imageUrl, imageHint: image.imageHint, description: image.description };
+    
+    // Handle local images
+    let imageUrl = image.imageUrl;
+    if (image.imageUrl.startsWith('/')) {
+      // This is a local image, use as is
+      imageUrl = image.imageUrl;
+    } else {
+      // This is an external image
+      imageUrl = image.imageUrl;
+    }
+    
+    return { imageUrl, imageHint: image.imageHint, description: image.description };
+};
+
+const findImageOnly = (id: string): { imageUrl: string; imageHint: string } => {
+    const image = placeholderImages.find(img => img.id === id);
+    if (!image) {
+      console.warn(`Image with id "${id}" not found. Using default placeholder.`);
+      // Ensure a valid placeholder is returned if an image is not found.
+      return { imageUrl: 'https://picsum.photos/seed/error/1920/1080', imageHint: 'placeholder' };
+    }
+    
+    // Handle local images
+    let imageUrl = image.imageUrl;
+    if (image.imageUrl.startsWith('/')) {
+      // This is a local image, use as is
+      imageUrl = image.imageUrl;
+    } else {
+      // This is an external image
+      imageUrl = image.imageUrl;
+    }
+    
+    return { imageUrl, imageHint: image.imageHint };
 };
 
 export const services: Service[] = [
@@ -21,19 +53,19 @@ export const services: Service[] = [
     icon: React.createElement(Code, { className: "w-10 h-10" }),
     title: 'Web Development',
     description: 'We build fast, responsive, and scalable web applications tailored to your specific business needs, using the latest technologies.',
-    ...findImage('service-web-dev')
+    ...findImageOnly('service-web-dev')
   },
   {
     icon: React.createElement(BrainCircuit, { className: "w-10 h-10" }),
     title: 'AI Integration',
     description: 'Leverage the power of artificial intelligence. We integrate custom AI models and solutions to automate processes and enhance user experiences.',
-    ...findImage('service-ai')
+    ...findImageOnly('service-ai')
   },
   {
     icon: React.createElement(BarChart3, { className: "w-10 h-10" }),
     title: 'Data Science',
     description: 'Turn your data into actionable insights. Our data science services include analytics, visualization, and predictive modeling to drive your decisions.',
-    ...findImage('service-data-science')
+    ...findImageOnly('service-data-science')
   },
 ];
 
@@ -67,19 +99,19 @@ export const portfolioProjects: Project[] = [
     id: 'proj-1',
     title: 'Student Dropout Prediction System',
     description: 'A cutting-edge e-commerce solution with personalized recommendations and predictive analytics.',
-    ...findImage('project-1')
+    ...findImageOnly('project-1')
   },
   {
     id: 'proj-2',
     title: 'Influencer Outreach agent',
     description: 'An interactive dashboard for visualizing complex financial data and market trends.',
-    ...findImage('project-2')
+    ...findImageOnly('project-2')
   },
   {
     id: 'proj-3',
     title: 'Stock market analyzer',
     description: 'Redesigned a major corporate website for improved user experience and modern aesthetics.',
-    ...findImage('project-3')
+    ...findImageOnly('project-3')
   },
 ];
 
@@ -88,7 +120,7 @@ export const teamMembers: TeamMember[] = [
     id: 'team-1',
     name: 'Suyash Gupta',
     role: 'Founder & CEO,<br />Head of Data Science',
-    ...findImage('team-1')
+    ...findImageOnly('team-1')
   },
 ];
 
@@ -118,18 +150,18 @@ export const blogPosts: BlogPost[] = [
     id: 'blog-1',
     title: 'The Future of Web Development is AI',
     excerpt: 'Explore how artificial intelligence is revolutionizing the way we build and interact with websites.',
-    ...findImage('blog-1')
+    ...findImageOnly('blog-1')
   },
   {
     id: 'blog-2',
     title: 'Unlocking Business Potential with Data Science',
     excerpt: 'A deep dive into how data-driven strategies can boost efficiency and profitability.',
-    ...findImage('blog-2')
+    ...findImageOnly('blog-2')
   },
   {
     id: 'blog-3',
     title: 'Our Favorite Tech Stacks of 2024',
     excerpt: 'A look at the powerful and efficient technologies we love to use for client projects.',
-    ...findImage('blog-3')
+    ...findImageOnly('blog-3')
   },
 ];
