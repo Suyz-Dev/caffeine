@@ -1,0 +1,100 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-1",
+      "description": "Abstract network connections representing AI",
+      "imageUrl": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "abstract network"
+    },
+    {
+      "id": "hero-2",
+      "description": "Developer working on code on multiple monitors",
+      "imageUrl": "https://images.unsplash.com/photo-1618423168533-9a37c4c7a336?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "developer setup"
+    },
+    {
+      "id": "hero-3",
+      "description": "Server room with glowing lights",
+      "imageUrl": "https://images.unsplash.com/photo-1580894908361-967195033215?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "data center"
+    },
+    {
+      "id": "project-1",
+      "description": "Abstract visualization of an AI-powered e-commerce platform.",
+      "imageUrl": "https://images.unsplash.com/photo-1765445666054-b039548214d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhYnN0cmFjdCUyMGNvZGV8ZW58MHx8fHwxNzY4Mzg0NTA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract code"
+    },
+    {
+      "id": "project-2",
+      "description": "Clean dashboard interface for a FinTech data science project.",
+      "imageUrl": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc2ODQwNDQ2MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data dashboard"
+    },
+    {
+      "id": "project-3",
+      "description": "A modern and sleek corporate website design.",
+      "imageUrl": "https://images.unsplash.com/photo-1487014679447-9f8336841d58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d2Vic2l0ZSUyMGRlc2lnbnxlbnwwfHx8fDE3Njg0MDAwMTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "website design"
+    },
+    {
+      "id": "team-1",
+      "description": "Professional headshot of the lead developer.",
+      "imageUrl": "https://images.unsplash.com/photo-1544168190-79c17527004f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cHJvZmVzc2lvbmFsJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY4Mzk4NzcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "team-2",
+      "description": "Professional headshot of the head of data science.",
+      "imageUrl": "https://images.unsplash.com/photo-1573165850883-9b0e18c44bd2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwwfHx8fDE3NjgzODA3OTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional woman"
+    },
+    {
+      "id": "team-3",
+      "description": "Professional headshot of a senior full-stack engineer.",
+      "imageUrl": "https://images.unsplash.com/photo-1565687981296-535f09db714e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYWxlJTIwZGV2ZWxvcGVyfGVufDB8fHx8MTc2ODQwNDQ2MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male developer"
+    },
+    {
+      "id": "team-4",
+      "description": "Professional headshot of the UX/UI design lead.",
+      "imageUrl": "https://images.unsplash.com/photo-1753162657563-fe0889dc12c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmZW1hbGUlMjBkZXNpZ25lcnxlbnwwfHx8fDE3Njg0MDQ0NjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "female designer"
+    },
+    {
+      "id": "blog-1",
+      "description": "An image representing the intersection of AI and web development.",
+      "imageUrl": "https://images.unsplash.com/photo-1744230673231-865d54a0aba4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhaSUyMHdlYnxlbnwwfHx8fDE3Njg0MDQ0NjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ai web"
+    },
+    {
+      "id": "blog-2",
+      "description": "An abstract image related to data science and business growth.",
+      "imageUrl": "https://images.unsplash.com/photo-1762427354251-f008b64dbc32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYXRhJTIwZ3Jvd3RofGVufDB8fHx8MTc2ODQwNDQ2MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data growth"
+    },
+    {
+      "id": "blog-3",
+      "description": "Logos of popular technology stacks.",
+      "imageUrl": "https://images.unsplash.com/photo-1662027044921-6febc57a0c53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0ZWNoJTIwbG9nb3N8ZW58MHx8fHwxNzY4NDA0NDYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tech logos"
+    },
+    {
+      "id": "service-web-dev",
+      "description": "Lines of code on a screen.",
+      "imageUrl": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "code screen"
+    },
+    {
+      "id": "service-ai",
+      "description": "Abstract AI neural network.",
+      "imageUrl": "https://images.unsplash.com/photo-1534723452862-4c874018d66d?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "ai network"
+    },
+    {
+      "id": "service-data-science",
+      "description": "Complex data charts and graphs.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "data charts"
+    }
+  ]
+}

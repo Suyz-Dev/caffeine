@@ -1,0 +1,110 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  email     String   @unique
+  name      String?
+  password  String   // This should be hashed
+  role      String   @default("USER")
+  
+  // Relations
+  contactForms   ContactForm[]
+  refreshToken   RefreshToken?
+  
+  @@map("users")
+}
+
+model ContactForm {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  name      String
+  email     String
+  subject   String
+  message   String
+  status    String   @default("NEW") // NEW, IN_PROGRESS, RESOLVED, CLOSED
+  
+  // Foreign Keys
+  userId String?
+  user   User?    @relation(fields: [userId], references: [id])
+  
+  @@map("contact_forms")
+}
+
+model RefreshToken {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  expiresAt DateTime
+  revoked   Boolean  @default(false)
+  userAgent String?
+  ip        String?
+  
+  // Foreign Keys
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@map("refresh_tokens")
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  title       String
+  description String
+  imageUrl    String
+  imageHint   String
+  link        String?
+  technologies String[]
+  
+  @@map("projects")
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  title       String
+  description String
+  imageUrl    String
+  imageHint   String
+  icon        String   // Lucide icon name
+  
+  @@map("services")
+}
+
+model Testimonial {
+  id       String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  quote    String
+  author   String
+  company  String
+  rating   Int      @default(5) @int @gt(0) @lt(6)
+  
+  @@map("testimonials")
+}
+
+model BlogPost {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  title     String
+  excerpt   String
+  content   String?
+  imageUrl  String
+  imageHint String
+  published Boolean  @default(false)
+  authorId  String
+  author    User     @relation(fields: [authorId], references: [id])
+  
+  @@map("blog_posts")
+}
